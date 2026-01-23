@@ -128,6 +128,7 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Form
             // 
             // btnLuu
             // 
+            btnLuu.ForeColor = Color.RosyBrown;
             btnLuu.Location = new Point(390, 80);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(75, 30);
