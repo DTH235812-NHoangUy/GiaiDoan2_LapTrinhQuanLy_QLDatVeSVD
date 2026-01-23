@@ -161,13 +161,14 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Form
             // 
             // btnSua
             // 
+            btnSua.BackColor = Color.FromArgb(255, 128, 128);
             btnSua.ForeColor = Color.IndianRed;
             btnSua.Location = new Point(210, 80);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(75, 30);
             btnSua.TabIndex = 3;
             btnSua.Text = "Sửa";
-            btnSua.UseVisualStyleBackColor = true;
+            btnSua.UseVisualStyleBackColor = false;
             btnSua.Click += btnSua_Click;
             // 
             // btnThem
