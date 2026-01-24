@@ -80,6 +80,7 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Form
             // 
             // grpThongTin
             // 
+            grpThongTin.BackColor = Color.FromArgb(128, 255, 128);
             grpThongTin.Controls.Add(cboSanVanDong);
             grpThongTin.Controls.Add(lblSVD);
             grpThongTin.Controls.Add(btnThoat);
@@ -90,6 +91,7 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Form
             grpThongTin.Controls.Add(btnThem);
             grpThongTin.Controls.Add(lblTenKhuVuc);
             grpThongTin.Controls.Add(txtTenKhuVuc);
+            grpThongTin.ForeColor = Color.Red;
             grpThongTin.Location = new Point(12, 12);
             grpThongTin.Name = "grpThongTin";
             grpThongTin.Size = new Size(776, 130);
@@ -117,7 +119,7 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Form
             // 
             // btnThoat
             // 
-            btnThoat.BackColor = Color.Red;
+            btnThoat.BackColor = Color.FromArgb(255, 128, 128);
             btnThoat.Location = new Point(570, 80);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(75, 30);
