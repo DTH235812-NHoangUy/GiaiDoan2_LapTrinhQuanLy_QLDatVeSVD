@@ -145,7 +145,7 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Form
             btnThoat.Size = new Size(75, 23);
             btnThoat.TabIndex = 4;
             btnThoat.Text = "Thoát";
-            
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnLuu
             // 
@@ -155,7 +155,7 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Form
             btnLuu.Size = new Size(75, 23);
             btnLuu.TabIndex = 5;
             btnLuu.Text = "Lưu";
-         
+            btnLuu.Click += btnLuu_Click;
             // 
             // btnHuyBo
             // 
@@ -164,7 +164,7 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Form
             btnHuyBo.Size = new Size(75, 23);
             btnHuyBo.TabIndex = 6;
             btnHuyBo.Text = "Hủy";
-           
+            btnHuyBo.Click += btnHuyBo_Click;
             // 
             // btnXoa
             // 
@@ -174,7 +174,7 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Form
             btnXoa.Size = new Size(75, 23);
             btnXoa.TabIndex = 7;
             btnXoa.Text = "Xóa";
-           
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnSua
             // 
@@ -183,7 +183,7 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Form
             btnSua.Size = new Size(75, 23);
             btnSua.TabIndex = 8;
             btnSua.Text = "Sửa";
-            
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -192,7 +192,7 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Form
             btnThem.Size = new Size(75, 23);
             btnThem.TabIndex = 9;
             btnThem.Text = "Thêm";
-            
+            btnThem.Click += btnThem_Click;
             // 
             // lblHoTen
             // 
@@ -211,15 +211,19 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Form
             // 
             // frmKhachHang
             // 
-            // frmKhachHang
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.grpThongTin);
-            this.Name = "frmKhachHang";
-            this.Text = "Quản lý Khách hàng";
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(groupBox2);
+            Controls.Add(grpThongTin);
+            Name = "frmKhachHang";
+            Text = "Quản lý Khách hàng";
+            Load += frmKhachHang_Load;
+            groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvKhachHang).EndInit();
+            grpThongTin.ResumeLayout(false);
+            grpThongTin.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
