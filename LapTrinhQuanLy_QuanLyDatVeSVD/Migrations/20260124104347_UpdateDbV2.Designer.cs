@@ -4,6 +4,7 @@ using LapTrinhQuanLy_QuanLyDatVeSVD.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LapTrinhQuanLy_QuanLyDatVeSVD.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260124104347_UpdateDbV2")]
+    partial class UpdateDbV2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,32 +24,6 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("LapTrinhQuanLy_QuanLyDatVeSVD.Data.BangGia", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<string>("GhiChu")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("GiaTien")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("LoaiVeID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SuKienID")
-                        .HasColumnType("int");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("BangGia");
-                });
 
             modelBuilder.Entity("LapTrinhQuanLy_QuanLyDatVeSVD.Data.ChiTietVe", b =>
                 {
@@ -116,10 +93,6 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Migrations
                     b.Property<decimal>("TongTien")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("TrangThaiThanhToan")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("ID");
 
                     b.ToTable("HoaDonVe");
@@ -188,39 +161,6 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("LoaiVe");
-                });
-
-            modelBuilder.Entity("LapTrinhQuanLy_QuanLyDatVeSVD.Data.NhanVien", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<string>("MatKhau")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SoDienThoai")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TenDangNhap")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TenNhanVien")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("VaiTro")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("NhanVien");
                 });
 
             modelBuilder.Entity("LapTrinhQuanLy_QuanLyDatVeSVD.Data.SanVanDong", b =>

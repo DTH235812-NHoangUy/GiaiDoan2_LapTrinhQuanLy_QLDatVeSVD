@@ -18,6 +18,10 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Data
         public DbSet<HoaDonVe> HoaDonVe { get; set; }
         public DbSet<ChiTietVe> ChiTietVe { get; set; }
 
+        public DbSet<NhanVien> NhanVien { get; set; }
+        public DbSet<BangGia> BangGia { get; set; }
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

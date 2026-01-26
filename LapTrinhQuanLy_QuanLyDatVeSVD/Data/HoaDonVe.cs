@@ -11,5 +11,7 @@ namespace LapTrinhQuanLy_QuanLyDatVeSVD.Data
         public int KhachHangID { get; set; }
         public int SuKienID { get; set; }
         public decimal TongTien { get; set; }
+        public int NhanVienID { get; set; }
+        public string TrangThaiThanhToan { get; set; }
     }
 }
